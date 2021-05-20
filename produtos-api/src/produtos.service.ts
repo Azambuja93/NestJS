@@ -1,4 +1,4 @@
-import { Produto } from "./produto.model";
+import { Produto } from "./produtos.model";
 import { Get, Injectable } from "@nestjs/common";
 
 @Injectable()

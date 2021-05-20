@@ -1,12 +1,10 @@
 import { Controller, Get, Param, Post, Body, Put, Delete } from "@nestjs/common";
-import { Produto } from "./produto.model";
+import { Produto } from "./produtos.model";
 import { ProdutosService } from "./produtos.service";
 
 @Controller('produtos')
 export class ProdutosController {
-
     constructor(private produtosService: ProdutosService) {
-
     }
 
     @Get()
@@ -32,6 +30,10 @@ export class ProdutosController {
     @Delete(':id')
     apagar(@Param() params) {
         this.produtosService.apagar(params.id)
+    }
+
+    metodo() : string {
+        return
     }
 
 
